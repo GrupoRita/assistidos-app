@@ -1,13 +1,32 @@
-# Sample Snack app
+# Assistidos APP
 
-Welcome to Expo!
+Esse aplicativo mobile tem o objetivo de cadastrar todos os assistidos de uma casa de caridade e manter o histórico de todos os benefícios e doações recebidos por cada um.
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by clicking the **Run** button or use the simulator by clicking **Tap to Play**. When you're done, click **Save** and share the link!
+Essa demanda surgiu no [Grupo Rita](http://www.rita.org.br/) que suporta a Casa Espírita Cristã Maria de Nazaré, uma casa que existe há 50 anos e atende mais de 400 famílias na Rocinha, favela do Rio de Janeiro.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Export** your project and use it with [expo-cli](https://docs.expo.io/versions/latest/introduction/installation.html).
+O projeto nasceu open-source para que outras casas possam usar o aplicativo.
 
-Projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the **Embed** button.
+## Stack
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.io).
+- [AWS Amplify](https://aws-amplify.github.io)
+- [Reactive Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack-web).
+## Desenvolvendo
+
+Clone o repositório
+
+    $ git clone git@github.com:GrupoRita/assistidos-app.git
+
+Instale as dependências
+
+    $ cd assistidos-app/
+    $ npm install
+
+## Licença
+
+Esse código é livre para ser usado dentro dos termos da licença [MIT license](http://www.opensource.org/licenses/mit-license.php).
+
+## Bugs, Issues, Agradecimentos, etc
+
+Comentários são bem-vindos. Envie seu feedback através do [issue tracker do GitHub](http://github.com/GrupoRita/assistidos-app/issues)

@@ -18,10 +18,18 @@ Clone o repositório
 
     $ git clone git@github.com:GrupoRita/assistidos-app.git
 
-Instale as dependências
+Instale as dependências do projeto
 
     $ cd assistidos-app/
     $ npm install
+    
+Instale o client do Expo
+
+    $ npm install -g expo-cli
+    
+Rode o projeto
+
+    $ expo start
 
 ## Licença
 

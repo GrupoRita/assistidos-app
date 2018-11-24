@@ -23,7 +23,11 @@ Instale as dependências do projeto
     $ cd assistidos-app/
     $ npm install
     
-Instale o client do Expo
+Instale o Amplify CLI
+
+    $ npm install -g @aws-amplify/cli
+    
+Instale o client do Expo CLI
 
     $ npm install -g expo-cli
     

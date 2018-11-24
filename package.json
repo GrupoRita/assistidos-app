@@ -4,6 +4,12 @@
   "description": "No description",
   "author": null,
   "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  },
   "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
     "expo": "^31.0.0",

@@ -1,28 +1,67 @@
 {
   "expo": {
-    "name": "assistidos-app",
-    "description": "No description",
-    "slug": "snack-HyUxpzvCX",
-    "privacy": "unlisted",
-    "sdkVersion": "31.0.0",
+    "name": "Rita Atende",
+    "slug": "rita-atende",
     "version": "1.0.0",
     "orientation": "portrait",
-    "primaryColor": "#cccccc",
-    "icon": "https://d1wp6m56sqw74a.cloudfront.net/~assets/c9aa1be8a6a6fe81e20c3ac4106a2ebc",
-    "loading": {
-      "icon": "https://d1wp6m56sqw74a.cloudfront.net/~assets/c9aa1be8a6a6fe81e20c3ac4106a2ebc",
-      "hideExponentText": false
+    "icon": "./assets/images/icon.png",
+    "scheme": "ritaatende",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "br.org.rita.atende",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Usamos a câmera para tirar a foto do assistido.",
+        "NSPhotoLibraryUsageDescription": "Usamos suas fotos para escolher a foto do assistido."
+      }
     },
-    "packagerOpts": {
-      "assetExts": [
-        "ttf",
-        "mp4",
-        "otf",
-        "xml"
+    "android": {
+      "package": "br.org.rita.atende",
+      "adaptiveIcon": {
+        "backgroundColor": "#005998",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.NFC",
+        "android.permission.CAMERA"
       ]
     },
-    "ios": {
-      "supportsTablet": true
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FAF6EE",
+          "image": "./assets/images/logo-rita.jpg",
+          "imageWidth": 160
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Usamos a câmera para tirar a foto do assistido.",
+          "photosPermission": "Usamos suas fotos para escolher a foto do assistido."
+        }
+      ],
+      [
+        "react-native-nfc-manager",
+        {
+          "nfcPermission": "Usamos o NFC para ler o cartão do assistido.",
+          "includeNdefEntitlement": false
+        }
+      ],
+      "expo-font"
+    ],
+    "extra": {
+      "portalUrl": "https://portal.rita.org.br"
+    },
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
     }
   }
 }

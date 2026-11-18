@@ -16,6 +16,7 @@ import {
   formatDateTime,
   formatTime,
   isoDateToBr,
+  maskPhone,
   monthLabel,
   monthRange,
   plural,
@@ -111,7 +112,7 @@ export default function BeneficiaryPanel() {
           <View style={styles.details}>
             <Detail label="Nome completo" value={b.name} />
             <Detail label="Nome social" value={b.socialName} />
-            <Detail label="Telefone" value={b.phone} />
+            <Detail label="Telefone" value={b.phone ? maskPhone(b.phone) : null} />
             <Detail label="CPF" value={b.cpf} mono />
             <Detail label="Nascimento" value={isoDateToBr(b.birthDate)} />
             <Detail label="Cadastro" value={isoDateToBr(b.registeredAt)} />

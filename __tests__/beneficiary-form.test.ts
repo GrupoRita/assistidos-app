@@ -33,3 +33,11 @@ describe('formulário de assistido', () => {
     expect(initialValues(null, '04B733E1').cardUid).toBe('04B733E1');
   });
 });
+
+describe('telefone vindo do portal', () => {
+  it('o portal devolve só dígitos; o formulário mostra com máscara', () => {
+    const b = { id: 'b1', code: 'A-0001', name: 'MARIA', socialName: null, phone: '21987654321', cpf: '123.456.789-09',
+      birthDate: null, registeredAt: '2026-11-18', dependents: 0, cardUid: null, photoUrl: null, notes: null, active: true };
+    expect(initialValues(b).phone).toBe('(21) 98765-4321');
+  });
+});

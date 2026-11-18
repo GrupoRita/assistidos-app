@@ -6,7 +6,7 @@ import { DateRange } from '@/components/date-range';
 import { Avatar, Empty, Field, T } from '@/components/ui';
 import { useAsync } from '@/hooks/use-async';
 import { api } from '@/lib/api';
-import { brDateToIso, displayName, isoDateToBr } from '@/lib/format';
+import { brDateToIso, displayName, isoDateToBr, maskPhone } from '@/lib/format';
 import { colors, fonts, radius } from '@/lib/theme';
 
 export default function BeneficiaryListScreen() {
@@ -66,7 +66,7 @@ export default function BeneficiaryListScreen() {
               {item.name}
             </T>
             <T variant="small">
-              {item.phone || '—'} · cadastro {isoDateToBr(item.registeredAt) || '—'}
+              {item.phone ? maskPhone(item.phone) : '—'} · cadastro {isoDateToBr(item.registeredAt) || '—'}
             </T>
           </View>
           <T variant="small">{item.code}</T>

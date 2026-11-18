@@ -35,7 +35,7 @@ export function initialValues(b?: Beneficiary | null, cardUid?: string): FormVal
   return {
     name: b?.name ?? '',
     socialName: b?.socialName ?? '',
-    phone: b?.phone ?? '',
+    phone: maskPhone(b?.phone ?? ''),
     cpf: b?.cpf ?? '',
     birthDate: isoDateToBr(b?.birthDate),
     registeredAt: isoDateToBr(b?.registeredAt ?? todayIso()),
